@@ -217,6 +217,10 @@
       };
 
       const params = new URLSearchParams(todoObj).toString();
+      if(!document.cookie.includes('uid=')){
+          console.log(document.cookie.uid)
+          window.location.href = '/login'
+      }
       fetch(`/add-data?${params}`)
         .then((res) => res.json())
         .then((data) => {
@@ -229,11 +233,19 @@
     }
 
     function deleteTask(id) {
+      if(!document.cookie.includes('uid=')){
+          console.log(document.cookie.uid)
+          window.location.href = '/login'
+      }
       fetch(`/delete/${id}`, { method: "DELETE" })
         .then((res) => res.json())
         .then(() => location.reload());
     }
     function markComplete(id) {
+      if(!document.cookie.includes('uid=')){
+          console.log(document.cookie.uid)
+          window.location.href = '/login'
+      }
       fetch(`/complete/${id}`, { method: "PATCH" })
         .then((res) => res.json())
         .then((message) => {
@@ -243,12 +255,17 @@
     }
 
     function clearData(length) {
+
       if (length === 0) {
         alert("No todos to clear!");
         return;
       }
 
       if (confirm("Are you sure you want to clear all todos?")) {
+        if(!document.cookie.includes('uid=')){
+          console.log(document.cookie.uid)
+          window.location.href = '/login'
+        }
         fetch("/clear-all", {
           method: "DELETE",
         })
