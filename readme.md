@@ -29,8 +29,8 @@ Follow these steps to get the project running on your local machine:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/CipherHitro/url-shortener.git
-cd url-shortener
+git clone https://github.com/CipherHitro/To-Do-List-WebAPP.git
+cd To-Do-List-WebAPP
 ```
 ### 2. Install dependencies
 
