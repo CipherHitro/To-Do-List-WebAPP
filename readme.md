@@ -32,7 +32,7 @@ Follow these steps to get the project running on your local machine:
 git clone https://github.com/CipherHitro/To-Do-List-WebAPP.git
 cd To-Do-List-WebAPP
 ```
-### 2. Install dependencies
+### 2. Install dependencies 
 
 ```bash
 npm install
